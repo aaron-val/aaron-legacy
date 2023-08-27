@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+    <title>A Kingdom's Legacy</title>
+        <style>
+            .row{
+                width:720px;
+                margin: 10px auto 10px auto ;
+            }
+            .image-container {
+                display: table-cell;
+                vertical-align: middle;
+                padding:20px;
+            }
+        </style>
+    </head>
+
+    <body style="background-color: rgb(42, 26, 2);">
+       
+
+        <div class="row">
+            <div class="image-container"><img id="circ" src="img/Crowning.png" height="200" width="200"/></div>
+            <div class="image-container"><img id="tria" src="img/Peace.png" height="200" width="200"/></div>
+            <div class="image-container"><img id="squa" src="img/Castle.png" height="200" width="200"/></div>
+        </div>
+
+        <div class="row">
+            <div class="image-container"><img id="hexa" src="img/Tearing.png" height="200" width="200"/></div>
+            <div class="image-container"><img id="trap" src="img/King.png" height="200" width="200"/></div>
+            <div class="image-container"><img id="sixxx" src="img/Crown.png" height="200" width="200"/></div>
+            </div>
+
+        <div class="row">
+            <div class="image-container"><img id="seven" src="img/Building.png" height="200" width="200"/></div>
+            <div class="image-container"><img id="eight" src="img/Book.png" height="200" width="200"/></div>
+            <div class="image-container"><img id="ninee" src="img/Flag.png" height="200" width="200"/></div>
+        </div>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.1.2/buzz.min.js"></script>
+
+        <script>
+            const boom = new buzz.sound ("sound/1.wav")
+            const yeet = new buzz.sound ("sound/2.wav")
+            const boot = new buzz.sound ("sound/3.wav")
+            const yer = new buzz.sound ("sound/4.wav")
+            const boob = new buzz.sound ("sound/5.wav")
+            const six = new buzz.sound ("sound/6.wav")
+            const sev = new buzz.sound ("sound/7.wav")
+            const eig = new buzz.sound ("sound/8.wav")
+            const nine = new buzz.sound ("sound/9.wav")
+            
+            const circle = document.getElementById("circ")
+            circle.onpointerdown = () => {
+                boom.play ()
+                circle.src = 'img/Crowning1.png' }
+            circle.onpointerup = () => circle.src = 'img/Crowning.png'
+
+            const triangle = document.getElementById("tria")
+            triangle.onpointerdown = () => {
+                yeet.play ()
+                triangle.src = 'img/Peace1.png' }
+            triangle.onpointerup = () => triangle.src = 'img/Peace.png'
+           
+            const square = document.getElementById("squa")
+            square.onpointerdown = () => {
+                boot.play ()
+                square.src = 'img/Castle1.png' }
+            square.onpointerup = () => square.src = 'img/Castle.png'
+           
+            const hexagon = document.getElementById("hexa")
+            hexagon.onpointerdown = () => {
+                yer.play ()
+                hexagon.src = 'img/Tearing1.png' }
+            hexagon.onpointerup = () => hexagon.src = 'img/Tearing.png'
+
+            const trapezium = document.getElementById("trap")
+            trapezium.onpointerdown = () => {
+                yer.play ()
+                trapezium.src = 'img/King1.png' }
+            trapezium.onpointerup = () => trapezium.src = 'img/King.png'
+
+            const sixx = document.getElementById("sixxx")
+            sixx.onpointerdown = () => {
+                six.play ()
+                sixx.src = 'img/Crown1.png' }
+            sixx.onpointerup = () => sixx.src = 'img/Crown.png'
+
+            const sevne = document.getElementById("seven")
+            sevne.onpointerdown = () => {
+                sev.play ()
+                sevne.src = 'img/Building1.png' }
+            sevne.onpointerup = () => sevne.src = 'img/Building.png'
+           
+            const eight = document.getElementById("eight")
+            eight.onpointerdown = () => {
+                eig.play ()
+                eight.src = 'img/Book1.png' }
+            eight.onpointerup = () => eight.src = 'img/Book.png'
+           
+            const flagg = document.getElementById("ninee")
+            flagg.onpointerdown = () => {
+                nine.play ()
+                flagg.src = 'img/Flag1.png' }
+            flagg.onpointerup = () =>flagg.src = 'img/Flag.png'
+
+
+            document.body.onpointerdown = () => {
+                if (buzz.audioCtx.state != `running`) {
+                    buzz.audioCtx.resume ()
+                }
+            }
+        </script>
+    </body>
+    
+</html>
